@@ -1,0 +1,19 @@
+<div class="maincontainer">
+    <div class="heading">
+        QUIZZ ASSESSMENT 
+    </div>
+    <div class='question'*ngFor="let question of questions; let i = index">
+        <h3>{{ question.questionText }}</h3>
+        <div *ngFor="let option of question.options">
+          <input type="radio" name="question{{i}}" [value]="option" [(ngModel)]="question.selectedAnswer"> {{ option }}
+        </div>
+      </div>
+      <br>
+      <div class="button">
+          <button id='button'(click)="submit()">Submit</button> 
+      </div>
+      
+</div>
+
+
+  
